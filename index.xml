@@ -6,10 +6,20 @@
     <description>Recent content on rab3it</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 07 Aug 2019 23:26:54 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 22 Feb 2020 17:33:33 +0800</lastBuildDate>
     
 	<atom:link href="https://rab3it.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Learn Docker Mark</title>
+      <link>https://rab3it.github.io/post/dockermark/</link>
+      <pubDate>Sat, 22 Feb 2020 17:33:33 +0800</pubDate>
+      
+      <guid>https://rab3it.github.io/post/dockermark/</guid>
+      <description>比你优秀的人都在努力，你还有什么理由不奋斗！
+ 年前学docker的笔记，放上来当作第一篇内容文章</description>
+    </item>
     
     <item>
       <title>Init</title>
