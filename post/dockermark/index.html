@@ -4,24 +4,88 @@
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>docker 笔记 - rab3it</title><meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta property="og:title" content="docker 笔记" />
-<meta property="og:description" content="docker底层原理
-docker 是一个Client-Server结构的系统，docker守护进程运行在主机上，然后通过Socket连接从客户端访问，守护进程从客户端接受命令并管理运行在主机上的容器。容器是一个运行时环境。
+<meta property="og:description" content="docker 与 传统虚拟机的不同之处：
+1.传统虚拟机技术是虚拟出一套硬件后，在其上运行一个完整操作系统，在该系统上运行所需应用程序。
+2.容器内的应用进程直接运行与宿主的内核，容器内没有自己的内核，而且也没有进行硬件虚拟。因此容器要比传统虚拟机更为轻便。
+3.每个容器之间互相隔离，每个容器都有自己的文件系统，容器之间进程不会相互影响，能区分计算资源。
+三要素
+REPOSITORY 仓库
+IMAGE 镜像
+container 容器
+Docker是一个容器运行载体（管理引擎）
+镜像（IMAGE）：应用程序和配置依赖打包好的可交付的运行环境
+仓库保存镜像，是存放镜像的场所
+镜像可以创建多个容器（类可以创建多个对象）
+TAG 标签就相当于版本号
+docker底层原理 docker 是一个Client-Server结构的系统，docker守护进程运行在主机上，然后通过Socket连接从客户端访问，守护进程从客户端接受命令并管理运行在主机上的容器。容器是一个运行时环境。
 为什么docker比vmware快？
 1.docker 有更少的抽象层，
 docker Engine替换了硬件资源虚拟化（Hypervisor）
-2.docker利用宿主机内核不需要Guest OS（vmware需要重新加载操作系统内核）" />
+2.docker利用宿主机内核不需要Guest OS（vmware需要重新加载操作系统内核）
+面向软件开发者
+Docker帮助命令 docker版本
+docker version
+docker描述
+docker info
+docker帮助
+docker &ndash;help
+Docker镜像命令 镜像-类
+一个镜像可以形成多个容器实例
+鲸鱼背上有集装箱
+蓝色的大海里面 &ndash; 宿主机系统（ubuntu）
+鲸鱼 &ndash; docker
+集装箱 &ndash; 容器实例 from 来自镜像模板
+镜像命令 列出本地主机上的镜像
+docker images
+REPOSITORY 表示镜像的仓库源
+TAG 镜像的标签（版本）
+IMAGE ID 镜像ID
+CREATED 镜像创建时间
+SIZE 镜像大小" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://rab3it.github.io/post/dockermark/" />
 <meta property="article:published_time" content="2020-02-22T17:33:33+08:00" />
 <meta property="article:modified_time" content="2020-02-22T17:33:33+08:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="docker 笔记"/>
-<meta name="twitter:description" content="docker底层原理
-docker 是一个Client-Server结构的系统，docker守护进程运行在主机上，然后通过Socket连接从客户端访问，守护进程从客户端接受命令并管理运行在主机上的容器。容器是一个运行时环境。
+<meta name="twitter:description" content="docker 与 传统虚拟机的不同之处：
+1.传统虚拟机技术是虚拟出一套硬件后，在其上运行一个完整操作系统，在该系统上运行所需应用程序。
+2.容器内的应用进程直接运行与宿主的内核，容器内没有自己的内核，而且也没有进行硬件虚拟。因此容器要比传统虚拟机更为轻便。
+3.每个容器之间互相隔离，每个容器都有自己的文件系统，容器之间进程不会相互影响，能区分计算资源。
+三要素
+REPOSITORY 仓库
+IMAGE 镜像
+container 容器
+Docker是一个容器运行载体（管理引擎）
+镜像（IMAGE）：应用程序和配置依赖打包好的可交付的运行环境
+仓库保存镜像，是存放镜像的场所
+镜像可以创建多个容器（类可以创建多个对象）
+TAG 标签就相当于版本号
+docker底层原理 docker 是一个Client-Server结构的系统，docker守护进程运行在主机上，然后通过Socket连接从客户端访问，守护进程从客户端接受命令并管理运行在主机上的容器。容器是一个运行时环境。
 为什么docker比vmware快？
 1.docker 有更少的抽象层，
 docker Engine替换了硬件资源虚拟化（Hypervisor）
-2.docker利用宿主机内核不需要Guest OS（vmware需要重新加载操作系统内核）"/>
+2.docker利用宿主机内核不需要Guest OS（vmware需要重新加载操作系统内核）
+面向软件开发者
+Docker帮助命令 docker版本
+docker version
+docker描述
+docker info
+docker帮助
+docker &ndash;help
+Docker镜像命令 镜像-类
+一个镜像可以形成多个容器实例
+鲸鱼背上有集装箱
+蓝色的大海里面 &ndash; 宿主机系统（ubuntu）
+鲸鱼 &ndash; docker
+集装箱 &ndash; 容器实例 from 来自镜像模板
+镜像命令 列出本地主机上的镜像
+docker images
+REPOSITORY 表示镜像的仓库源
+TAG 镜像的标签（版本）
+IMAGE ID 镜像ID
+CREATED 镜像创建时间
+SIZE 镜像大小"/>
 <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,300italic,400italic|Raleway:200,300" rel="stylesheet">
 
 	<link rel="stylesheet" type="text/css" media="screen" href="https://rab3it.github.io/css/normalize.css" />
@@ -70,12 +134,287 @@ docker Engine替换了硬件资源虚拟化（Hypervisor）
 		</div>
 
 		<div class="markdown">
-			<p><strong>docker底层原理</strong></p>
+			<p>docker 与 传统虚拟机的不同之处：</p>
+<p>1.传统虚拟机技术是虚拟出一套硬件后，在其上运行一个完整操作系统，在该系统上运行所需应用程序。</p>
+<p>2.容器内的应用进程直接运行与宿主的内核，容器内没有自己的内核，而且也没有进行硬件虚拟。因此容器要比传统虚拟机更为轻便。</p>
+<p>3.每个容器之间互相隔离，每个容器都有自己的文件系统，容器之间进程不会相互影响，能区分计算资源。</p>
+<p><img src="evernotecid://A7FB46E0-C774-40D1-82F3-C4CF9F14D074/appyinxiangcom/17196221/ENResource/p914" alt="83a6b0e0ca854964fe2e5f8a6c97abb3.png"></p>
+<p>三要素</p>
+<p>REPOSITORY 仓库</p>
+<p>IMAGE 镜像</p>
+<p>container 容器</p>
+<p>Docker是一个容器运行载体（管理引擎）</p>
+<p>镜像（IMAGE）：应用程序和配置依赖打包好的可交付的运行环境</p>
+<p>仓库保存镜像，是存放镜像的场所</p>
+<p>镜像可以创建多个容器（类可以创建多个对象）</p>
+<p>TAG 标签就相当于版本号</p>
+<h3 id="docker底层原理"><strong>docker底层原理</strong></h3>
 <p>docker 是一个Client-Server结构的系统，docker守护进程运行在主机上，然后通过Socket连接从客户端访问，守护进程从客户端接受命令并管理运行在主机上的容器。容器是一个运行时环境。</p>
 <p>为什么docker比vmware快？</p>
 <p>1.docker 有更少的抽象层，</p>
 <p>docker Engine替换了硬件资源虚拟化（Hypervisor）</p>
 <p>2.docker利用宿主机内核不需要Guest OS（vmware需要重新加载操作系统内核）</p>
+<p>面向软件开发者</p>
+<p><img src="evernotecid://A7FB46E0-C774-40D1-82F3-C4CF9F14D074/appyinxiangcom/17196221/ENResource/p916" alt="0b25e2098d28f2481948557c042c97a7.png"></p>
+<h3 id="docker帮助命令"><strong>Docker帮助命令</strong></h3>
+<p>docker版本</p>
+<p>docker version</p>
+<p>docker描述</p>
+<p>docker info</p>
+<p>docker帮助</p>
+<p>docker &ndash;help</p>
+<h3 id="docker镜像命令"><strong>Docker镜像命令</strong></h3>
+<p>镜像-类</p>
+<p>一个镜像可以形成多个容器实例</p>
+<p>鲸鱼背上有集装箱</p>
+<p>蓝色的大海里面 &ndash; 宿主机系统（ubuntu）</p>
+<p>鲸鱼 &ndash; docker</p>
+<p>集装箱 &ndash; 容器实例 from 来自镜像模板</p>
+<h3 id="镜像命令"><strong>镜像命令</strong></h3>
+<p>列出本地主机上的镜像</p>
+<p>docker images</p>
+<p>REPOSITORY 表示镜像的仓库源</p>
+<p>TAG 镜像的标签（版本）</p>
+<p>IMAGE ID 镜像ID</p>
+<p>CREATED 镜像创建时间</p>
+<p>SIZE 镜像大小</p>
+<p>options说明：</p>
+<p>-a 列出本地所有的镜像（含中间映像层）</p>
+<p>-q 只显示镜像ID</p>
+<p>&ndash;digets 显示镜像的摘要信息</p>
+<p>&ndash;no-trunc 显示完整的镜像信息</p>
+<p>搜索镜像</p>
+<p>docker search 镜像名</p>
+<p>options说明：</p>
+<p>-s 列出收藏数不小于指定值的镜像</p>
+<p>&ndash;no-trunc 显示完整的镜像描述</p>
+<p>&ndash;automated 只列出automated的镜像</p>
+<p>下载镜像</p>
+<p>docker pull 镜像名[:TAG]</p>
+<p>删除镜像</p>
+<p>docker rmi (remove image)</p>
+<p>options说明：</p>
+<p>强制删除</p>
+<p>docker rmi -f</p>
+<p>删除多个</p>
+<p>docker rmi -f 镜像名1:TAG 镜像名2:TAG</p>
+<p>docker rmi af 7a 09</p>
+<p>删除全部</p>
+<p>docker rmi -f ${docker images -qa}</p>
+<p>修改镜像名称</p>
+<p>docker tag imageID newname:tag(版本)</p>
+<p>然后在删除旧的镜像ID</p>
+<p>docker rmi imageID（旧的）</p>
+<h3 id="容器命令"><strong>容器命令</strong></h3>
+<p>容器（上）</p>
+<p>有镜像才能创建容器，这是根本前提（下载centos镜像）</p>
+<p>容器是简易版的linux</p>
+<p>(包含root用户权限、进程空间、用户空间和网络空间等和运行在其中的应用程序)</p>
+<p>新建并启动容器</p>
+<p>docker run [options]IMAGE[COMMAND][ARG&hellip;]</p>
+<p>docker run &ndash;name tomcat -p 80:80 tomcat:8.5.19</p>
+<p>options说明：</p>
+<p>&ndash;name=&quot;容器新名字&rdquo;：为容器制定一个名称</p>
+<p>-d：后台运行容器，并返回容器ID，启动守护进程 #守护态（Daemonized）</p>
+<p>-i: 交互式操作,通常与-t同时使用 #input</p>
+<p>-t: 为容器重新分配一个伪输入终端，通常-i同时使用 #terminal</p>
+<p>-P：随机端口映射（外部:服务端口）</p>
+<p>-P(大写)：指定端口映射</p>
+<p>(使用docker ps 可以看到随机的端口)</p>
+<p>有四种方式：</p>
+<p>ip:hostPort:containerPort</p>
+<p>ip::containerPort</p>
+<p>hostPort:containerPort #常用</p>
+<p>containerPort</p>
+<p>/bin/bash：放在镜像名后的是命令，这里我们希望有个交互式 Shell，因此用的是 /bin/bash。</p>
+<p>docker run -d -p 80:80 phpImages</p>
+<p>列出当前所有正在运行的容器</p>
+<p>docker ps</p>
+<p>options说明：</p>
+<p>-a, &ndash;all 显示所有容器（正在运行+历史运行）</p>
+<p>-f, &ndash;filter 显示最近创建的容器</p>
+<p>-n, &ndash;last int 显示最近n个创建的容器</p>
+<p>-q, &ndash;quiet 静默模式，只显示容器编号</p>
+<p>&ndash;no-trunc, 不截断输出</p>
+<p>退出容器</p>
+<p>exit 容器停止退出</p>
+<p>ctrl+P+Q 容器不停止退出</p>
+<p>启动容器</p>
+<p>docker start 容器ID（CONTAINER ID）</p>
+<p>重启容器</p>
+<p>docker restart 容器ID（CONTAINER ID）</p>
+<p>停止容器(停止)</p>
+<p>docker stop 容器ID（CONTAINER ID）</p>
+<p>停止容器（强制停止）</p>
+<p>docker kill 容器ID（CONTAINER ID）</p>
+<p>删除已停止的容器</p>
+<p>docker rm 容器ID（CONTAINER ID）</p>
+<p>注意：rmi(remove images) rmi是删除镜像</p>
+<p>强制删除容器</p>
+<p>docker rm -f 容器ID（CONTAINER ID）</p>
+<p>一次删除多个容器</p>
+<p>docker rm -f $(docker ps -a) #先查询在删除</p>
+<p>docker ps -a -q | xargs docker rm</p>
+<p>管道符 上一个命令的结果作为输入参数传递给xargs参数</p>
+<p>修改容器名称</p>
+<p>docker rename oldname newname</p>
+<p>容器（下）</p>
+<p><em>重要</em></p>
+<p>启动守护式容器</p>
+<p>docker run -d 容器名称</p>
+<p>有些需要在后台启动，有些需要在前台启动</p>
+<p><img src="evernotecid://A7FB46E0-C774-40D1-82F3-C4CF9F14D074/appyinxiangcom/17196221/ENResource/p917" alt="947525e7e3c42b2943299916ca59ab5d.png"></p>
+<p>原因：</p>
+<p>docker容器后台运行，就必须又一个前台进程</p>
+<p>（与前台交互）</p>
+<p>最佳解决方案是：</p>
+<p>将你要运行的程序以前台进程的形式运行</p>
+<p>查看容器日志</p>
+<p>docker logs -f -t &ndash;tail</p>
+<p>-f follow 跟随最近的日志打印</p>
+<p>-t time</p>
+<p>&ndash;tail 数字，显示最后多少条</p>
+<p>```</p>
+<p>linux shell编程</p>
+<p>docker run -d centos /bin/sh -c &ldquo;while true;do echo hello zzyy;sleep 2;done&rdquo;</p>
+<p>以后台的形式运行centos：</p>
+<p>docker run -d centos</p>
+<p>运行后以脚本的形式循环：</p>
+<p>/bin/sh -c &ldquo;while true;</p>
+<p>每两秒的形式打印输出hello zzyy</p>
+<p>do echo hello zzyy;sleep 2;done“</p>
+<p>```</p>
+<p>查看容器内存运行的进程</p>
+<p>docker top 容器ID</p>
+<p>查看容器内部细节</p>
+<p>docker inspect 容器ID</p>
+<p>进入正在运行的容器并以命令行交互</p>
+<p>docker exec -it 容器ID bashshell</p>
+<p>docker attach 容器ID （重新进入）</p>
+<p>attach和exec的区别：</p>
+<p>attach （不打开新的进程）</p>
+<p>直接进入容器启动命令的终端，不会启动新的进程</p>
+<p>exec （打开新的进程）</p>
+<p>在容器中打开行的终端，并且可以启动新的进程</p>
+<p>从容器内拷贝文件到主机上</p>
+<p>docker cp 容器ID：容器内路径 目的主机路径</p>
+<p>如：docker cp 63:/run.sh /home/z</p>
+<h3 id="docker镜像原理"><strong>docker镜像原理</strong></h3>
+<p>docker镜像</p>
+<p>是什么：</p>
+<p>UnionFS（联合文件系统）</p>
+<p>Docker镜像加载原理</p>
+<p>分层的镜像（为什么要采用分层的结构呢）</p>
+<p>特点：</p>
+<p>Union文件系统（UnionFS）是一种分层、轻量级并且高性能的文件系统，<strong>它支持对文件系统的修改作为一次提交来一层层的叠加</strong> ，同时可以将不同目录挂载到同一个虚拟文件系统下(unite several directories into a single virtual filesystem)。Union 文件系统是 Docker 镜像的基础。镜像可以通过分层来进行继承，基于基础镜像（没有父镜像），可以制作各种具体的应用镜像。</p>
+<p>特性：<strong>一次同时加载多个文件系统，但从外面看起来，只能看到一个文件系统，联合加载会把各层文件系统叠加起来，这样最终的文件系统会包含所有底层的文件和目录。</strong></p>
+<p>分层的镜像</p>
+<p><img src="evernotecid://A7FB46E0-C774-40D1-82F3-C4CF9F14D074/appyinxiangcom/17196221/ENResource/p918" alt="5ecabc819a2ebd42efd428fe40902532.png"></p>
+<p><img src="evernotecid://A7FB46E0-C774-40D1-82F3-C4CF9F14D074/appyinxiangcom/17196221/ENResource/p919" alt="ce9ffdc5cf2aa792702bc051ee1cacc9.png"></p>
+<p>最大的好处就是 &ndash; 共享资源</p>
+<p>比如：有多个镜像都从相同的 base 镜像构建而来，那么 Docker Host 只需在磁盘上保存一份 base 镜像；同时内存中也只需加载一份 base 镜像，就可以为所有容器服务了。而且镜像的每一层都可以被共享，我们将在后面更深入地讨论这个特性。</p>
+<p>Docker镜像commit操作补充</p>
+<p>docker commit 提交容器副本使之成为一个新的镜像</p>
+<p>docker commit -m = &ldquo;提交的描述信息&rdquo; -a=&quot;作者&rdquo; 容器ID 要创建的目标镜像名:[标签名]</p>
+<p><img src="evernotecid://A7FB46E0-C774-40D1-82F3-C4CF9F14D074/appyinxiangcom/17196221/ENResource/p920" alt="1d9ec978f00f2e6f9828b9f693dac5a2.png"></p>
+<p>docker commit -a='rabbit&rsquo; -m=&quot;tomcatTest&rdquo; without docs 638412a7bd0d rab3it/tomcatT:1.0</p>
+<h3 id="docker容器数据卷"><strong>docker容器数据卷</strong></h3>
+<p>是什么</p>
+<p>查到老师电脑拷贝的硬盘</p>
+<p><img src="evernotecid://A7FB46E0-C774-40D1-82F3-C4CF9F14D074/appyinxiangcom/17196221/ENResource/p921" alt="16a8d58918c3eb2293a3d8780164c0ec.png"></p>
+<p>能干嘛：</p>
+<p>容器的持久化</p>
+<p>容器间继承+共享数据</p>
+<p><img src="evernotecid://A7FB46E0-C774-40D1-82F3-C4CF9F14D074/appyinxiangcom/17196221/ENResource/p922" alt="6350bfd0d293fe9e250d16361da32166.png"></p>
+<p>数据卷</p>
+<p>容器内添加</p>
+<p>1⃣️直接命令添加</p>
+<p>2⃣️dockerFile添加</p>
+<p>直接命令添加</p>
+<p><img src="evernotecid://A7FB46E0-C774-40D1-82F3-C4CF9F14D074/appyinxiangcom/17196221/ENResource/p927" alt="9039e4ccaee0bc101f5db3b364a55186.png"></p>
+<p>命令</p>
+<p>docker run -it -v/宿主机绝对路径目录:/容器内目录 镜像名</p>
+<p>比如：</p>
+<p>docker run -it -v/myDataVolume:/dataVolumeContainer 镜像名</p>
+<p><img src="evernotecid://A7FB46E0-C774-40D1-82F3-C4CF9F14D074/appyinxiangcom/17196221/ENResource/p925" alt="b1cdd77980b977c0b4aff1fd58527d41.png"></p>
+<p>查看数据卷是否挂载成功</p>
+<p>docker inspect 容器ID</p>
+<p><img src="evernotecid://A7FB46E0-C774-40D1-82F3-C4CF9F14D074/appyinxiangcom/17196221/ENResource/p924" alt="bb9002be35d5fd9ca3b33e2e55555b9a.png"></p>
+<p>容器和宿主机之间数据共享</p>
+<p><img src="evernotecid://A7FB46E0-C774-40D1-82F3-C4CF9F14D074/appyinxiangcom/17196221/ENResource/p923" alt="6a96f2317059c227894881bf0997ff4f.png"></p>
+<p>容器停止退出后，主机修改后数据是否同步</p>
+<p>完全同步</p>
+<p><img src="evernotecid://A7FB46E0-C774-40D1-82F3-C4CF9F14D074/appyinxiangcom/17196221/ENResource/p926" alt="bc9beef344f58d67d78b72a941734c1d.png"></p>
+<p>命令带权限</p>
+<p>如果Rw是false</p>
+<p>docker run -it -v/宿主机绝对路径目录:/容器内目录:ro 镜像名</p>
+<p>ro read-only 只读</p>
+<p>TAG tar文件</p>
+<p>IMAGE ID 镜像ID</p>
+<p>镜像：虚拟机之前需要的系统，类似iso、dmg文件等</p>
+<p>容器：正在运行的虚拟机</p>
+<p>tar文件：类似VMware中的vmdk文件，可以把使用中的文件保存成tar文件，给别人并且可以直接通过load加载镜像</p>
+<p>dockerfile 写如何构建的步骤指定镜像如何构建</p>
+<p>命令为build</p>
+<p>REPOSITORY 仓库</p>
+<p>保存了很多镜像，比如共有的 第三方的 ubuntu、mysql、nginx、tomcat 等等，也可以通过push 上传镜像</p>
+<h3 id="下载"><strong>下载</strong></h3>
+<p>Docker pull nginx(不指定版本，默认下载最新的)</p>
+<p>等于 docker pull nginx:latest</p>
+<h3 id="运行"><strong>运行</strong></h3>
+<p>docker run -d -p 80:80 nginx</p>
+<p>-p 端口映射（外部:服务端口）</p>
+<p>-d 后台运行(Daemonized 守护进程)</p>
+<h3 id="进入容器"><strong>进入容器</strong></h3>
+<p><img src="evernotecid://A7FB46E0-C774-40D1-82F3-C4CF9F14D074/appyinxiangcom/17196221/ENResource/p913" alt="363611dbcd40e424ea033945f1d88bf8.png"></p>
+<p>查看运行的容器</p>
+<p>docker ps</p>
+<p>进入容器</p>
+<p>docker exec -it 45 bash</p>
+<p>删除容器</p>
+<p>docker rm -f 45</p>
+<p>修改</p>
+<p>docker commit 45 m1</p>
+<p>dockerfile</p>
+<p>from 指定</p>
+<p>============docker命令==============</p>
+<p>安装docker</p>
+<p>yum install docker</p>
+<p>启动docker</p>
+<p>systemctl start docker</p>
+<p>关闭docker</p>
+<p>systemctl stop docker</p>
+<p>下载相应镜像</p>
+<p>docker pull centos/ubuntu/tomcat  </p>
+<p>docker run –d -p 8080:8080 tomcat</p>
+<p>docker run &ndash;name tomcat -p 8080:8080 -d tomcat 运行相应镜像</p>
+<p>–name 是创建好的容器命名</p>
+<p>-p 端口映射 自定义:原来的端口</p>
+<p>-d 后台运行(Daemonized 守护进程)</p>
+<p>-e 设置参数查看docker容器id (CONTAINER ID)方法</p>
+<p>docker run -i -t ubuntu：15.10 /bin/bash</p>
+<p>先进入（运行）容器，就会有docker 容器id</p>
+<p>-d :分离模式: 在后台运行</p>
+<p>-i :即使没有附加也保持STDIN 打开</p>
+<p>-t :分配一个伪终端</p>
+<p>stdin解释：</p>
+<p>在Linux系统中，一切设备都看作文件。而每打开一个文件，就有一个代表该打开文件的文件描述符。</p>
+<p>程序启动时默认打开三个I/O设备文件：标准输入文件stdin，标准输出文件stdout，标准错误输出文件stderr，分别得到文件描述符 0, 1, 2。查看运行的容器</p>
+<p>docker ps -a/docker psdocker start CID（容器ID）</p>
+<p>docker rm CID（容器ID）</p>
+<p>进入容器内部</p>
+<p>docker exec -it 容器ID /bin/bashBash 也是大多数Linux 系统默认的 Shell。</p>
+<p>（linux中的shell类似于win中的.bat）! 告诉系统其后路径所指定的程序即是解释此脚本文件的 Shell 程序。</p>
+<p>docker stop containerId // containerId 是容器的ID</p>
+<p>docker rm containerId // containerId 是容器的ID</p>
+<p>docker stop</p>
+<p><img src="evernotecid://A7FB46E0-C774-40D1-82F3-C4CF9F14D074/appyinxiangcom/17196221/ENResource/p915" alt="4a1a4b1a63e336aefd3c78252faa2abc.png"></p>
+<p>(docker ps -a -q) // remove删除所有容器</p>
+<p>docker 更改镜像id</p>
+<p>docker vulhubdocker-compose build up -d</p>
+<p> </p>
+<h4 id="参考"><strong>参考</strong>：</h4>
+<p><a href="http://www.dockerinfo.net/document">docker中文文档</a></p>
 
 		</div>
 

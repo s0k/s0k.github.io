@@ -17,12 +17,44 @@
       <pubDate>Sat, 22 Feb 2020 17:33:33 +0800</pubDate>
       
       <guid>https://rab3it.github.io/post/dockermark/</guid>
-      <description>docker底层原理
-docker 是一个Client-Server结构的系统，docker守护进程运行在主机上，然后通过Socket连接从客户端访问，守护进程从客户端接受命令并管理运行在主机上的容器。容器是一个运行时环境。
+      <description>docker 与 传统虚拟机的不同之处：
+1.传统虚拟机技术是虚拟出一套硬件后，在其上运行一个完整操作系统，在该系统上运行所需应用程序。
+2.容器内的应用进程直接运行与宿主的内核，容器内没有自己的内核，而且也没有进行硬件虚拟。因此容器要比传统虚拟机更为轻便。
+3.每个容器之间互相隔离，每个容器都有自己的文件系统，容器之间进程不会相互影响，能区分计算资源。
+三要素
+REPOSITORY 仓库
+IMAGE 镜像
+container 容器
+Docker是一个容器运行载体（管理引擎）
+镜像（IMAGE）：应用程序和配置依赖打包好的可交付的运行环境
+仓库保存镜像，是存放镜像的场所
+镜像可以创建多个容器（类可以创建多个对象）
+TAG 标签就相当于版本号
+docker底层原理 docker 是一个Client-Server结构的系统，docker守护进程运行在主机上，然后通过Socket连接从客户端访问，守护进程从客户端接受命令并管理运行在主机上的容器。容器是一个运行时环境。
 为什么docker比vmware快？
 1.docker 有更少的抽象层，
 docker Engine替换了硬件资源虚拟化（Hypervisor）
-2.docker利用宿主机内核不需要Guest OS（vmware需要重新加载操作系统内核）</description>
+2.docker利用宿主机内核不需要Guest OS（vmware需要重新加载操作系统内核）
+面向软件开发者
+Docker帮助命令 docker版本
+docker version
+docker描述
+docker info
+docker帮助
+docker &amp;ndash;help
+Docker镜像命令 镜像-类
+一个镜像可以形成多个容器实例
+鲸鱼背上有集装箱
+蓝色的大海里面 &amp;ndash; 宿主机系统（ubuntu）
+鲸鱼 &amp;ndash; docker
+集装箱 &amp;ndash; 容器实例 from 来自镜像模板
+镜像命令 列出本地主机上的镜像
+docker images
+REPOSITORY 表示镜像的仓库源
+TAG 镜像的标签（版本）
+IMAGE ID 镜像ID
+CREATED 镜像创建时间
+SIZE 镜像大小</description>
     </item>
     
     <item>
