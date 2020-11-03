@@ -17,7 +17,12 @@
       <pubDate>Sat, 22 Feb 2020 17:33:33 +0800</pubDate>
       
       <guid>https://rab3it.github.io/post/dockermark/</guid>
-      <description>docker笔记，作为第一篇内容文章</description>
+      <description>docker底层原理
+docker 是一个Client-Server结构的系统，docker守护进程运行在主机上，然后通过Socket连接从客户端访问，守护进程从客户端接受命令并管理运行在主机上的容器。容器是一个运行时环境。
+为什么docker比vmware快？
+1.docker 有更少的抽象层，
+docker Engine替换了硬件资源虚拟化（Hypervisor）
+2.docker利用宿主机内核不需要Guest OS（vmware需要重新加载操作系统内核）</description>
     </item>
     
     <item>
