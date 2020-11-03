@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Git 笔记 - rab3it</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta property="og:title" content="Git 笔记" />
+<meta property="og:description" content="Git学习 Git基础设置 设置签名（作用是区分每个人） 1.设置用户名 Git config &ndash;global user.name &lsquo;rab3it&rsquo;
+2.设置用户名邮箱 Git config &ndash;global user.email &lsquo;rab3it@qq.com&rsquo;
+设置的签名和github账号没关系（可以不一样）
+签名级别 1.项目级别/仓库级别：仅在本地库范围内有效 git config user.name/email tom
+2.系统用户级别：登录当前操作系统的用户范围 git config &ndash;global user.name/email tom
+注： .git文件为隐藏文件，里面有config文件，储存着用户名和邮箱以及密码 比如：url = git@github.com:rab3it/rab3it.github.io.git
+初始化一个新的Git仓库 1.创建文件夹 mkdir test #新建文件夹
+2.在文件夹内初始化Git（创建Git仓库） cd test git init #初始化（初始化后会在本地创建一个隐藏的.git文件）
+向仓库提交文件 1.创建a.php文件 touch a.php
+Git 工作区域 Git仓库 (Git Repository) 暂存区 工作区（Working Dictory） #（包含.git文件的目录或者说包含本地仓库的目录） 文件流程：工作区 -- 暂存区 -- Git仓库 2.查看git状态（查看当前文件在哪个区域以及文件状态） git status
+3.提交工作区文件到暂存区 git add a.php #git add 文件 git add -A #提交所有文件 注： 从暂存区撤回：git rm &ndash;cached a." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://rab3it.github.io/post/git/" />
+<meta property="article:published_time" content="2019-06-15T00:31:37+08:00" />
+<meta property="article:modified_time" content="2019-06-15T00:31:37+08:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Git 笔记"/>
+<meta name="twitter:description" content="Git学习 Git基础设置 设置签名（作用是区分每个人） 1.设置用户名 Git config &ndash;global user.name &lsquo;rab3it&rsquo;
+2.设置用户名邮箱 Git config &ndash;global user.email &lsquo;rab3it@qq.com&rsquo;
+设置的签名和github账号没关系（可以不一样）
+签名级别 1.项目级别/仓库级别：仅在本地库范围内有效 git config user.name/email tom
+2.系统用户级别：登录当前操作系统的用户范围 git config &ndash;global user.name/email tom
+注： .git文件为隐藏文件，里面有config文件，储存着用户名和邮箱以及密码 比如：url = git@github.com:rab3it/rab3it.github.io.git
+初始化一个新的Git仓库 1.创建文件夹 mkdir test #新建文件夹
+2.在文件夹内初始化Git（创建Git仓库） cd test git init #初始化（初始化后会在本地创建一个隐藏的.git文件）
+向仓库提交文件 1.创建a.php文件 touch a.php
+Git 工作区域 Git仓库 (Git Repository) 暂存区 工作区（Working Dictory） #（包含.git文件的目录或者说包含本地仓库的目录） 文件流程：工作区 -- 暂存区 -- Git仓库 2.查看git状态（查看当前文件在哪个区域以及文件状态） git status
+3.提交工作区文件到暂存区 git add a.php #git add 文件 git add -A #提交所有文件 注： 从暂存区撤回：git rm &ndash;cached a."/>
+<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,300italic,400italic|Raleway:200,300" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" media="screen" href="https://rab3it.github.io/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://rab3it.github.io/css/main.css" />
+
+	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+	<script src="https://rab3it.github.io/js/main.js"></script>
+</head>
+
+<body>
+	<div class="container wrapper post">
+		<div class="header">
+	<h1 class="site-title"><a href="https://rab3it.github.io/">rab3it</a></h1>
+	<div class="site-description"><h2></h2><nav class="nav social">
+			<ul class="flat"><a href="/index.xml" title="RSS"><i data-feather="rss"></i></a></ul>
+		</nav>
+	</div>
+
+	<nav class="nav">
+		<ul class="flat">
+			
+			<li>
+				<a href="/">Home</a>
+			</li>
+			
+			<li>
+				<a href="/post">All posts</a>
+			</li>
+			
+			<li>
+				<a href="/about">About</a>
+			</li>
+			
+			<li>
+				<a href="/tags">Tags</a>
+			</li>
+			
+		</ul>
+	</nav>
+</div>
+
+
+		<div class="post-header">
+			<h1 class="title">Git 笔记</h1>
+			<div class="meta">Posted at &mdash; Jun 15, 2019</div>
+		</div>
+
+		<div class="markdown">
+			<h2 id="git学习">Git学习</h2>
+<h4 id="git基础设置">Git基础设置</h4>
+<p>设置签名（作用是区分每个人）
+1.设置用户名
+Git config &ndash;global user.name &lsquo;rab3it&rsquo;</p>
+<p>2.设置用户名邮箱
+Git config &ndash;global user.email &lsquo;<a href="mailto:rab3it@qq.com">rab3it@qq.com</a>&rsquo;</p>
+<p>设置的签名和github账号没关系（可以不一样）</p>
+<p>签名级别
+1.项目级别/仓库级别：仅在本地库范围内有效
+git config  user.name/email tom</p>
+<p>2.系统用户级别：登录当前操作系统的用户范围
+git config &ndash;global  user.name/email tom</p>
+<p>注：
+.git文件为隐藏文件，里面有config文件，储存着用户名和邮箱以及密码
+比如：url = <a href="mailto:git@github.com">git@github.com</a>:rab3it/rab3it.github.io.git</p>
+<h3 id="初始化一个新的git仓库">初始化一个新的Git仓库</h3>
+<p>1.创建文件夹
+mkdir test  #新建文件夹</p>
+<p>2.在文件夹内初始化Git（创建Git仓库）
+cd test
+git init    #初始化（初始化后会在本地创建一个隐藏的.git文件）</p>
+<h3 id="向仓库提交文件">向仓库提交文件</h3>
+<p>1.创建a.php文件
+touch a.php</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">Git 工作区域
+Git仓库 (Git Repository)
+暂存区
+工作区（Working Dictory）    #（包含.git文件的目录或者说包含本地仓库的目录）
+
+文件流程：工作区 -- 暂存区 -- Git仓库
+</code></pre></div><p>2.查看git状态（查看当前文件在哪个区域以及文件状态）
+git status</p>
+<p>3.提交工作区文件到暂存区
+git add a.php       #git add 文件
+git add -A          #提交所有文件
+注：
+从暂存区撤回：git rm &ndash;cached a.php    #git rm &ndash;cached 文件</p>
+<p>4.提交暂存区文件到Git区
+git commit -m &ldquo;add a.php&rdquo;    #git commit -m &ldquo;提交描述&rdquo;  （m message）</p>
+<h3 id="版本回溯">版本回溯</h3>
+<p>查看日志
+git log</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">commit 2774013c5300d1ef949d35d527589bc247a2d342 (HEAD -&gt; master)   
+# 以这串数字为提交的hash值来标明值，HEAD 是指针 指明当前版本
+Author: rab3it &lt;xxxx@qq.com&gt;    #作者
+Date:   Sat Feb 22 23:32:54 2020 +0800  #时间
+
+    练习git   #备注
+
+</code></pre></div><p>日志以 行 来显示
+git log &ndash;pretty=oneline</p>
+<p>简洁版以行显示
+git log &ndash;oneline</p>
+<p>在oneline的基础上显示到某个版本需要的步数
+git reglog</p>
+<p>HEAD@{x}    #移动到当前版本需要移动多少步</p>
+<p>显示方式 同linux中的less
+空格 向下翻页
+b   向上翻页
+q   退出</p>
+<h3 id="分支">分支</h3>
+<p>在版本控制过程中，使用多条线同时推进多个任务</p>
+<p>master（主干）</p>
+<p>新开辟分支：
+feature_blue（前端模块）
+feature_game（游戏模块）
+最后合并分支</p>
+<p>分支的好处：
+同时并行推进多个功能开发，提高开发效率
+各个分支在开发过程中，如果某一个分支开发失败，不会对其他分支有任何影响。失败的分支删除重新开始即可。</p>
+<h3 id="分支操作">分支操作</h3>
+<p>git status  结果有master，默认主干为master</p>
+<p>查看分支
+git branch -v</p>
+<p>添加分支
+git branch hot_fix      #git branch 分支名</p>
+<p>切换分支
+git checkout hot_fix    #git checkout 分支名</p>
+<p>git branch -v   #发现已经在hot_fix分支</p>
+<p>hot_fix修改好后进行合并分支</p>
+<h3 id="合并分支">合并分支</h3>
+<p>1.切换到接受修改的分支（被合并，增加新内容）上，
+2.执行merge命令</p>
+<p>git branch -v
+git checkout master
+git branch -v
+git merge hot_fix</p>
+<h3 id="合并分支产生冲突">合并分支产生冲突</h3>
+<p>master和hot_fix 同时修改一个文件</p>
+<p>提示手动修改
+git status</p>
+<p>解决冲突：
+1.编辑文件，删除特殊符号
+2.把文件修改到满意的程度
+3.git add 文件名
+4.git commit -m &lsquo;日志信息&rsquo;  #此时commit不要带文件名</p>
+<h3 id="git加密原理">Git加密原理</h3>
+<p>hash算法
+明文 - 通过加密算法 - 密文</p>
+<h3 id="修改仓库文件">修改仓库文件</h3>
+<p>1.修改a.php
+cat a.php   #编辑a.php</p>
+<p>2.提交工作区文件到暂存区
+git add a.php   #编辑a.php</p>
+<h3 id="删除仓库文件">删除仓库文件</h3>
+<p>1.删除文件
+rm -rf a.php    #rm -rf 文件</p>
+<p>2.从git删除
+git rm a.php    #git em 文件</p>
+<p>3.暂存区到Git区
+git commit -m &lsquo;删除文件&rsquo;</p>
+<h3 id="git管理远程仓库">Git管理远程仓库</h3>
+<p>一个服务器，多人共同开发</p>
+<p>本地仓库同步到Git远程仓库中</p>
+<h3 id="git-克隆操作">Git 克隆操作</h3>
+<p>目的：将远程仓库（GitHub对应的项目）复制到本地</p>
+<p>git config &ndash;list   #列出所有 Git 当时能找到的配置</p>
+<p>代码：
+git clone <a href="https://github.com/rab3it/rab3it.github.io.git">https://github.com/rab3it/rab3it.github.io.git</a>  #git clone 仓库地址</p>
+<h3 id="给本地远程库起别名">给本地远程库起别名</h3>
+<p>查看别名
+get remote -v</p>
+<p>添加别名
+git remote add origin <a href="https://github.com/rab3it/rab3it.github.io.git">https://github.com/rab3it/rab3it.github.io.git</a>
+#origin 是远程库（后面的链接）的别名， add 添加</p>
+<h3 id="git推送">Git推送</h3>
+<p>推送 origin（远程库的别名）
+git push origin master</p>
+<h3 id="远程库修改的拉取">远程库修改的拉取</h3>
+<p>pull = fetch + merge</p>
+<p>抓取远程库文件
+git fetch origin master     #git fetch 远程库地址 远程分支名</p>
+<p>#远程合并到本地
+git merge origin/master     #git merge 远程库地址/远程分支名</p>
+<p>直接执行pull(条件 不会产生冲突的情况下)
+git pull origin master</p>
+<p>解决团队协作会冲突
+要点：
+1.如果不是基于GitHub远程库的最新版所做的修改，不能推送，必须先拉取。
+2.拉取下来后如果进入冲突状态，则按照“分支冲突解决”操作解决即可。</p>
+<h3 id="搭建个人网站">搭建个人网站</h3>
+<p>步骤：
+1.创建个人站点  &ndash;  新建仓库（注：仓库名必须是【用户名.github.io】）
+注：不要选择REMOAD.md
+2.在仓库下新建index.html的文件即可</p>
+<p>注：
+github pages仅支持静态网页
+仓库里面只能是.html文件</p>
+
+		</div>
+
+		<div class="post-tags">
+			
+				
+			
+		</div></div>
+	<div class="footer wrapper">
+	<nav class="nav">
+		<div>
+			 
+			
+			
+	</nav>
+</div>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-123-45', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<script>feather.replace()</script>
+</body>
+</html>

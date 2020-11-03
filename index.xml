@@ -6,15 +6,25 @@
     <description>Recent content on rab3it</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 22 Feb 2020 17:33:33 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 22 Jun 2019 17:33:33 +0800</lastBuildDate>
     
 	<atom:link href="https://rab3it.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>About</title>
+      <link>https://rab3it.github.io/about/</link>
+      <pubDate>Wed, 07 Aug 2019 21:37:53 +0800</pubDate>
+      
+      <guid>https://rab3it.github.io/about/</guid>
+      <description>欲速则不达
+逆水行舟，不进则退</description>
+    </item>
+    
+    <item>
       <title>docker 笔记</title>
       <link>https://rab3it.github.io/post/dockermark/</link>
-      <pubDate>Sat, 22 Feb 2020 17:33:33 +0800</pubDate>
+      <pubDate>Sat, 22 Jun 2019 17:33:33 +0800</pubDate>
       
       <guid>https://rab3it.github.io/post/dockermark/</guid>
       <description>docker 与 传统虚拟机的不同之处：
@@ -58,21 +68,22 @@ SIZE 镜像大小</description>
     </item>
     
     <item>
-      <title>Init</title>
-      <link>https://rab3it.github.io/post/init/</link>
-      <pubDate>Wed, 07 Aug 2019 23:26:54 +0800</pubDate>
+      <title>Git 笔记</title>
+      <link>https://rab3it.github.io/post/git/</link>
+      <pubDate>Sat, 15 Jun 2019 00:31:37 +0800</pubDate>
       
-      <guid>https://rab3it.github.io/post/init/</guid>
-      <description>INIT</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>https://rab3it.github.io/about/</link>
-      <pubDate>Wed, 07 Aug 2019 21:37:53 +0800</pubDate>
-      
-      <guid>https://rab3it.github.io/about/</guid>
-      <description>Nothing about!</description>
+      <guid>https://rab3it.github.io/post/git/</guid>
+      <description>Git学习 Git基础设置 设置签名（作用是区分每个人） 1.设置用户名 Git config &amp;ndash;global user.name &amp;lsquo;rab3it&amp;rsquo;
+2.设置用户名邮箱 Git config &amp;ndash;global user.email &amp;lsquo;rab3it@qq.com&amp;rsquo;
+设置的签名和github账号没关系（可以不一样）
+签名级别 1.项目级别/仓库级别：仅在本地库范围内有效 git config user.name/email tom
+2.系统用户级别：登录当前操作系统的用户范围 git config &amp;ndash;global user.name/email tom
+注： .git文件为隐藏文件，里面有config文件，储存着用户名和邮箱以及密码 比如：url = git@github.com:rab3it/rab3it.github.io.git
+初始化一个新的Git仓库 1.创建文件夹 mkdir test #新建文件夹
+2.在文件夹内初始化Git（创建Git仓库） cd test git init #初始化（初始化后会在本地创建一个隐藏的.git文件）
+向仓库提交文件 1.创建a.php文件 touch a.php
+Git 工作区域 Git仓库 (Git Repository) 暂存区 工作区（Working Dictory） #（包含.git文件的目录或者说包含本地仓库的目录） 文件流程：工作区 -- 暂存区 -- Git仓库 2.查看git状态（查看当前文件在哪个区域以及文件状态） git status
+3.提交工作区文件到暂存区 git add a.php #git add 文件 git add -A #提交所有文件 注： 从暂存区撤回：git rm &amp;ndash;cached a.</description>
     </item>
     
   </channel>
