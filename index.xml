@@ -6,10 +6,19 @@
     <description>Recent content on rab3it</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 22 Jun 2019 17:33:33 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 04 Nov 2020 07:37:27 +0800</lastBuildDate>
     
 	<atom:link href="https://rab3it.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Learn</title>
+      <link>https://rab3it.github.io/learn/</link>
+      <pubDate>Wed, 04 Nov 2020 07:37:27 +0800</pubDate>
+      
+      <guid>https://rab3it.github.io/learn/</guid>
+      <description>SRC挖掘 分享几个绕过URL跳转限制的思路</description>
+    </item>
     
     <item>
       <title>About</title>
