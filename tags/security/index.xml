@@ -77,17 +77,17 @@ SIZE 镜像大小</description>
       <pubDate>Sat, 15 Jun 2019 00:31:37 +0800</pubDate>
       
       <guid>https://rab3it.github.io/post/git/</guid>
-      <description>Git学习 Git基础设置 设置签名（作用是区分每个人） 1.设置用户名 Git config &amp;ndash;global user.name &amp;lsquo;rab3it&amp;rsquo;
-2.设置用户名邮箱 Git config &amp;ndash;global user.email &amp;lsquo;rab3it@qq.com&amp;rsquo;
+      <description>Git基础设置 设置签名（作用是区分每个人） 1.设置用户名 Git config --global user.name &#39;rab3it&#39;
+2.设置用户名邮箱 Git config --global user.email &#39;rab3it@qq.com&#39;
 设置的签名和github账号没关系（可以不一样）
 签名级别 1.项目级别/仓库级别：仅在本地库范围内有效 git config user.name/email tom
-2.系统用户级别：登录当前操作系统的用户范围 git config &amp;ndash;global user.name/email tom
+2.系统用户级别：登录当前操作系统的用户范围 git config --global user.name/email tom
 注： .git文件为隐藏文件，里面有config文件，储存着用户名和邮箱以及密码 比如：url = git@github.com:rab3it/rab3it.github.io.git
 初始化一个新的Git仓库 1.创建文件夹 mkdir test #新建文件夹
-2.在文件夹内初始化Git（创建Git仓库） cd test git init #初始化（初始化后会在本地创建一个隐藏的.git文件）
+2.在文件夹内初始化Git（创建Git仓库） cd test git init  #初始化（初始化后会在本地创建一个隐藏的.git文件）
 向仓库提交文件 1.创建a.php文件 touch a.php
 Git 工作区域 Git仓库 (Git Repository) 暂存区 工作区（Working Dictory） #（包含.git文件的目录或者说包含本地仓库的目录） 文件流程：工作区 -- 暂存区 -- Git仓库 2.查看git状态（查看当前文件在哪个区域以及文件状态） git status
-3.提交工作区文件到暂存区 git add a.php #git add 文件 git add -A #提交所有文件 注： 从暂存区撤回：git rm &amp;ndash;cached a.</description>
+3.提交工作区文件到暂存区 git add a.php #git add 文件 git add -A  #提交所有文件 注： 从暂存区撤回：git rm --cached a.</description>
     </item>
     
   </channel>

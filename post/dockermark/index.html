@@ -138,7 +138,6 @@ SIZE 镜像大小"/>
 <p>1.传统虚拟机技术是虚拟出一套硬件后，在其上运行一个完整操作系统，在该系统上运行所需应用程序。</p>
 <p>2.容器内的应用进程直接运行与宿主的内核，容器内没有自己的内核，而且也没有进行硬件虚拟。因此容器要比传统虚拟机更为轻便。</p>
 <p>3.每个容器之间互相隔离，每个容器都有自己的文件系统，容器之间进程不会相互影响，能区分计算资源。</p>
-<p><img src="evernotecid://A7FB46E0-C774-40D1-82F3-C4CF9F14D074/appyinxiangcom/17196221/ENResource/p914" alt="83a6b0e0ca854964fe2e5f8a6c97abb3.png"></p>
 <p>三要素</p>
 <p>REPOSITORY 仓库</p>
 <p>IMAGE 镜像</p>
@@ -155,7 +154,6 @@ SIZE 镜像大小"/>
 <p>docker Engine替换了硬件资源虚拟化（Hypervisor）</p>
 <p>2.docker利用宿主机内核不需要Guest OS（vmware需要重新加载操作系统内核）</p>
 <p>面向软件开发者</p>
-<p><img src="evernotecid://A7FB46E0-C774-40D1-82F3-C4CF9F14D074/appyinxiangcom/17196221/ENResource/p916" alt="0b25e2098d28f2481948557c042c97a7.png"></p>
 <h3 id="docker帮助命令"><strong>Docker帮助命令</strong></h3>
 <p>docker版本</p>
 <p>docker version</p>
@@ -263,7 +261,6 @@ SIZE 镜像大小"/>
 <p>启动守护式容器</p>
 <p>docker run -d 容器名称</p>
 <p>有些需要在后台启动，有些需要在前台启动</p>
-<p><img src="evernotecid://A7FB46E0-C774-40D1-82F3-C4CF9F14D074/appyinxiangcom/17196221/ENResource/p917" alt="947525e7e3c42b2943299916ca59ab5d.png"></p>
 <p>原因：</p>
 <p>docker容器后台运行，就必须又一个前台进程</p>
 <p>（与前台交互）</p>
@@ -309,42 +306,33 @@ SIZE 镜像大小"/>
 <p>Union文件系统（UnionFS）是一种分层、轻量级并且高性能的文件系统，<strong>它支持对文件系统的修改作为一次提交来一层层的叠加</strong> ，同时可以将不同目录挂载到同一个虚拟文件系统下(unite several directories into a single virtual filesystem)。Union 文件系统是 Docker 镜像的基础。镜像可以通过分层来进行继承，基于基础镜像（没有父镜像），可以制作各种具体的应用镜像。</p>
 <p>特性：<strong>一次同时加载多个文件系统，但从外面看起来，只能看到一个文件系统，联合加载会把各层文件系统叠加起来，这样最终的文件系统会包含所有底层的文件和目录。</strong></p>
 <p>分层的镜像</p>
-<p><img src="evernotecid://A7FB46E0-C774-40D1-82F3-C4CF9F14D074/appyinxiangcom/17196221/ENResource/p918" alt="5ecabc819a2ebd42efd428fe40902532.png"></p>
-<p><img src="evernotecid://A7FB46E0-C774-40D1-82F3-C4CF9F14D074/appyinxiangcom/17196221/ENResource/p919" alt="ce9ffdc5cf2aa792702bc051ee1cacc9.png"></p>
+<p>以pull为例，下载的过程中可看到docker的镜像一层一层的在下载。</p>
 <p>最大的好处就是 &ndash; 共享资源</p>
 <p>比如：有多个镜像都从相同的 base 镜像构建而来，那么 Docker Host 只需在磁盘上保存一份 base 镜像；同时内存中也只需加载一份 base 镜像，就可以为所有容器服务了。而且镜像的每一层都可以被共享，我们将在后面更深入地讨论这个特性。</p>
 <p>Docker镜像commit操作补充</p>
 <p>docker commit 提交容器副本使之成为一个新的镜像</p>
 <p>docker commit -m = &ldquo;提交的描述信息&rdquo; -a=&quot;作者&rdquo; 容器ID 要创建的目标镜像名:[标签名]</p>
-<p><img src="evernotecid://A7FB46E0-C774-40D1-82F3-C4CF9F14D074/appyinxiangcom/17196221/ENResource/p920" alt="1d9ec978f00f2e6f9828b9f693dac5a2.png"></p>
 <p>docker commit -a='rabbit&rsquo; -m=&quot;tomcatTest&rdquo; without docs 638412a7bd0d rab3it/tomcatT:1.0</p>
 <h3 id="docker容器数据卷"><strong>docker容器数据卷</strong></h3>
 <p>是什么</p>
 <p>查到老师电脑拷贝的硬盘</p>
-<p><img src="evernotecid://A7FB46E0-C774-40D1-82F3-C4CF9F14D074/appyinxiangcom/17196221/ENResource/p921" alt="16a8d58918c3eb2293a3d8780164c0ec.png"></p>
 <p>能干嘛：</p>
 <p>容器的持久化</p>
 <p>容器间继承+共享数据</p>
-<p><img src="evernotecid://A7FB46E0-C774-40D1-82F3-C4CF9F14D074/appyinxiangcom/17196221/ENResource/p922" alt="6350bfd0d293fe9e250d16361da32166.png"></p>
 <p>数据卷</p>
 <p>容器内添加</p>
 <p>1⃣️直接命令添加</p>
 <p>2⃣️dockerFile添加</p>
 <p>直接命令添加</p>
-<p><img src="evernotecid://A7FB46E0-C774-40D1-82F3-C4CF9F14D074/appyinxiangcom/17196221/ENResource/p927" alt="9039e4ccaee0bc101f5db3b364a55186.png"></p>
 <p>命令</p>
 <p>docker run -it -v/宿主机绝对路径目录:/容器内目录 镜像名</p>
 <p>比如：</p>
 <p>docker run -it -v/myDataVolume:/dataVolumeContainer 镜像名</p>
-<p><img src="evernotecid://A7FB46E0-C774-40D1-82F3-C4CF9F14D074/appyinxiangcom/17196221/ENResource/p925" alt="b1cdd77980b977c0b4aff1fd58527d41.png"></p>
 <p>查看数据卷是否挂载成功</p>
 <p>docker inspect 容器ID</p>
-<p><img src="evernotecid://A7FB46E0-C774-40D1-82F3-C4CF9F14D074/appyinxiangcom/17196221/ENResource/p924" alt="bb9002be35d5fd9ca3b33e2e55555b9a.png"></p>
 <p>容器和宿主机之间数据共享</p>
-<p><img src="evernotecid://A7FB46E0-C774-40D1-82F3-C4CF9F14D074/appyinxiangcom/17196221/ENResource/p923" alt="6a96f2317059c227894881bf0997ff4f.png"></p>
 <p>容器停止退出后，主机修改后数据是否同步</p>
 <p>完全同步</p>
-<p><img src="evernotecid://A7FB46E0-C774-40D1-82F3-C4CF9F14D074/appyinxiangcom/17196221/ENResource/p926" alt="bc9beef344f58d67d78b72a941734c1d.png"></p>
 <p>命令带权限</p>
 <p>如果Rw是false</p>
 <p>docker run -it -v/宿主机绝对路径目录:/容器内目录:ro 镜像名</p>
@@ -366,7 +354,6 @@ SIZE 镜像大小"/>
 <p>-p 端口映射（外部:服务端口）</p>
 <p>-d 后台运行(Daemonized 守护进程)</p>
 <h3 id="进入容器"><strong>进入容器</strong></h3>
-<p><img src="evernotecid://A7FB46E0-C774-40D1-82F3-C4CF9F14D074/appyinxiangcom/17196221/ENResource/p913" alt="363611dbcd40e424ea033945f1d88bf8.png"></p>
 <p>查看运行的容器</p>
 <p>docker ps</p>
 <p>进入容器</p>
@@ -408,7 +395,6 @@ SIZE 镜像大小"/>
 <p>docker stop containerId // containerId 是容器的ID</p>
 <p>docker rm containerId // containerId 是容器的ID</p>
 <p>docker stop</p>
-<p><img src="evernotecid://A7FB46E0-C774-40D1-82F3-C4CF9F14D074/appyinxiangcom/17196221/ENResource/p915" alt="4a1a4b1a63e336aefd3c78252faa2abc.png"></p>
 <p>(docker ps -a -q) // remove删除所有容器</p>
 <p>docker 更改镜像id</p>
 <p>docker vulhubdocker-compose build up -d</p>
