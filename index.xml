@@ -17,7 +17,12 @@
       <pubDate>Wed, 04 Nov 2020 07:37:27 +0800</pubDate>
       
       <guid>https://rab3it.github.io/learn/</guid>
-      <description>SRC挖掘 分享几个绕过URL跳转限制的思路</description>
+      <description>SRC挖掘 分享几个绕过URL跳转限制的思路
+https://www.anquanke.com/post/id/94377
+【技术分享】聊聊越权那些事儿
+https://www.anquanke.com/post/id/84892
+白帽子如何快速挖到人生的第一个漏洞 | 购物站点挖掘商城漏洞
+https://mp.weixin.qq.com/s/epTNHV1eyXXUA141jWIwuA</description>
     </item>
     
     <item>
@@ -27,7 +32,8 @@
       
       <guid>https://rab3it.github.io/about/</guid>
       <description>欲速则不达
-逆水行舟，不进则退</description>
+逆水行舟，不进则退
+从书中吸收知识，并做到知行合一</description>
     </item>
     
     <item>
@@ -104,7 +110,8 @@ Git 工作区域 Git仓库 (Git Repository) 暂存区 工作区（Working Dictor
       <description>20201103 更新文章：
   docker笔记
   git
-  待完成：  添加目录 添加favicon.ico 修改摘要方式 启用Tags  20191207 🍊 博客搭建</description>
+  待完成：  添加目录 添加favicon.ico 修改摘要方式 启用Tags  20191207 🍊 博客搭建
+Other /learn/</description>
     </item>
     
   </channel>
