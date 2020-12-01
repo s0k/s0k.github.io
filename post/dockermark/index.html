@@ -222,21 +222,21 @@ SIZE 镜像大小"/>
 <p>有四种方式：</p>
 <p>ip:hostPort:containerPort</p>
 <p>ip::containerPort</p>
-<p>hostPort:containerPort #常用</p>
+<p>hostPort:containerPort  #常用</p>
 <p>containerPort</p>
 <p>/bin/bash：放在镜像名后的是命令，这里我们希望有个交互式 Shell，因此用的是 /bin/bash。</p>
 <p>docker run -d -p 80:80 phpImages</p>
 <p>列出当前所有正在运行的容器</p>
 <p>docker ps</p>
 <p>options说明：</p>
-<p>-a, &ndash;all 显示所有容器（正在运行+历史运行）</p>
-<p>-f, &ndash;filter 显示最近创建的容器</p>
-<p>-n, &ndash;last int 显示最近n个创建的容器</p>
-<p>-q, &ndash;quiet 静默模式，只显示容器编号</p>
-<p>&ndash;no-trunc, 不截断输出</p>
+<p>-a, &ndash;all  #显示所有容器（正在运行+历史运行）</p>
+<p>-f, &ndash;filter  #显示最近创建的容器</p>
+<p>-n, &ndash;last int  #显示最近n个创建的容器</p>
+<p>-q, &ndash;quiet  #静默模式，只显示容器编号</p>
+<p>&ndash;no-trunc  #不截断输出</p>
 <p>退出容器</p>
-<p>exit 容器停止退出</p>
-<p>ctrl+P+Q 容器不停止退出</p>
+<p>exit  #容器停止退出</p>
+<p>ctrl+P+Q  #容器不停止退出</p>
 <p>启动容器</p>
 <p>docker start 容器ID（CONTAINER ID）</p>
 <p>重启容器</p>
@@ -251,7 +251,7 @@ SIZE 镜像大小"/>
 <p>强制删除容器</p>
 <p>docker rm -f 容器ID（CONTAINER ID）</p>
 <p>一次删除多个容器</p>
-<p>docker rm -f $(docker ps -a) #先查询在删除</p>
+<p>docker rm -f $(docker ps -a)  #先查询在删除</p>
 <p>docker ps -a -q | xargs docker rm</p>
 <p>管道符 上一个命令的结果作为输入参数传递给xargs参数</p>
 <p>修改容器名称</p>
@@ -364,7 +364,7 @@ SIZE 镜像大小"/>
 <p>docker commit 45 m1</p>
 <p>dockerfile</p>
 <p>from 指定</p>
-<p>============docker命令==============</p>
+<h3 id="docker命令"><strong>docker命令</strong></h3>
 <p>安装docker</p>
 <p>yum install docker</p>
 <p>启动docker</p>
@@ -392,15 +392,15 @@ SIZE 镜像大小"/>
 <p>进入容器内部</p>
 <p>docker exec -it 容器ID /bin/bashBash 也是大多数Linux 系统默认的 Shell。</p>
 <p>（linux中的shell类似于win中的.bat）! 告诉系统其后路径所指定的程序即是解释此脚本文件的 Shell 程序。</p>
-<p>docker stop containerId // containerId 是容器的ID</p>
-<p>docker rm containerId // containerId 是容器的ID</p>
+<p>docker stop containerId  #containerId 是容器的ID</p>
+<p>docker rm containerId  #containerId 是容器的ID</p>
 <p>docker stop</p>
-<p>(docker ps -a -q) // remove删除所有容器</p>
-<p>docker 更改镜像id</p>
+<p>(docker ps -a -q)  #remove删除所有容器</p>
+<p>docker  #更改镜像id</p>
 <p>docker vulhubdocker-compose build up -d</p>
 <p> </p>
 <h4 id="参考"><strong>参考</strong>：</h4>
-<p><a href="http://www.dockerinfo.net/document">docker中文文档</a></p>
+<p><a href="http:%E2%80%83#www.dockerinfo.net/document">docker中文文档</a></p>
 
 		</div>
 
