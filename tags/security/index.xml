@@ -35,7 +35,14 @@ https://www.anquanke.com/post/id/84892
 白帽子如何快速挖到人生的第一个漏洞 | 购物站点挖掘商城漏洞
 https://mp.weixin.qq.com/s/epTNHV1eyXXUA141jWIwuA
 ​
+JAVA反序列化 c3p0的三个gadget
+http://redteam.today/2020/04/18/c3p0的三个gadget/
+​
 一句话反弹shell生成器 https://ares-x.com/tools/reverse-shell/
+反弹shell集合
+https://weibell.github.io/reverse-shell-generator/
+Java Runtime bash编码
+http://jackson-t.ca/runtime-exec-payloads.html
 ​
 基于零组公开漏洞库 https://ares-x.com/wiki#/</description>
     </item>
@@ -92,7 +99,10 @@ SIZE 镜像大小</description>
       <pubDate>Sat, 15 Jun 2019 00:31:37 +0800</pubDate>
       
       <guid>https://rab3it.github.io/post/git/</guid>
-      <description>Git基础设置 设置签名（作用是区分每个人）
+      <description>需参考
+Git 学习
+Git属于分布式版本控制系统（SVN属于集中式版本控制系统）
+Git基础设置 设置签名（作用是区分每个人）
 1.设置用户名
 Git config --global user.name &#39;rab3it&#39;
 2.设置用户名邮箱
@@ -105,16 +115,15 @@ git config user.name/email tom
 git config --global user.name/email tom
 注： .git文件为隐藏文件，里面有config文件，储存着用户名和邮箱以及密码。
 比如：url = git@github.com:rab3it/rab3it.github.io.git
-初始化一个新的Git仓库 1.创建文件夹 mkdir test #新建文件夹
+Git 核心 Git 最核心的一个概念就是工作流。
+ 工作区(Workspace)是电脑中实际的目录。 暂存区(Index)类似于缓存区域，临时保存你的改动。 仓库区(Repository)，分为本地仓库和远程仓库。  创建版本库 ​	版本库又名仓库，英文名repository，可以简单理解成一个目录，这个目录里面的所有文件都可以被Git管理起来，每个文件的修改、删除，Git都能跟踪，以便任何时刻都可以追踪历史，或者在将来某个时刻可以&amp;quot;还原&amp;rdquo;。
+git init 1.创建文件夹 mkdir test #新建文件夹
 2.在文件夹内初始化Git（创建Git仓库）
 cd test
-git init  #初始化（初始化后会在本地创建一个隐藏的.git文件）
+git init  #初始化（初始化后会在本地创建一个隐藏的.git文件，这个目录是Git来跟踪管理版本库的）
 向仓库提交文件 1.创建a.py文件
 touch a.py
-Git 工作区域 Git仓库 (Git Repository) 暂存区 工作区（Working Dictory） #（包含.git文件的目录或者说包含本地仓库的目录） 文件流程：工作区 -- 暂存区 -- Git仓库 2.查看git状态（查看当前文件在哪个区域以及文件状态）
-git status
-3.提交工作区文件到暂存区
-git add a.py #git add 文件</description>
+git add从工作区提交到暂存区 git commit从暂存区提交到本地仓库 git push或git svn dcommit从本地仓库提交到远程仓库 文件流程：工作区 -- 暂存区 -- Git仓库 2.</description>
     </item>
     
   </channel>
