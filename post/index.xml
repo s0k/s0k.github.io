@@ -53,14 +53,12 @@ docker描述
 docker info
 docker帮助
 docker &amp;ndash;help
-Docker镜像命令 镜像-类
-一个镜像可以形成多个容器实例
+Docker镜像命令 镜像-类 一个镜像可以形成多个容器实例
 鲸鱼背上有集装箱
 蓝色的大海里面 &amp;ndash; 宿主机系统（ubuntu）
 鲸鱼 &amp;ndash; docker
 集装箱 &amp;ndash; 容器实例 from 来自镜像模板
-镜像命令 列出本地主机上的镜像
-docker images
+镜像命令 列出本地主机上的镜像 docker images
 REPOSITORY 表示镜像的仓库源
 TAG 镜像的标签（版本）
 IMAGE ID 镜像ID

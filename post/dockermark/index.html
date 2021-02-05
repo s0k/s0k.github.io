@@ -29,14 +29,12 @@ docker描述
 docker info
 docker帮助
 docker &ndash;help
-Docker镜像命令 镜像-类
-一个镜像可以形成多个容器实例
+Docker镜像命令 镜像-类 一个镜像可以形成多个容器实例
 鲸鱼背上有集装箱
 蓝色的大海里面 &ndash; 宿主机系统（ubuntu）
 鲸鱼 &ndash; docker
 集装箱 &ndash; 容器实例 from 来自镜像模板
-镜像命令 列出本地主机上的镜像
-docker images
+镜像命令 列出本地主机上的镜像 docker images
 REPOSITORY 表示镜像的仓库源
 TAG 镜像的标签（版本）
 IMAGE ID 镜像ID
@@ -73,14 +71,12 @@ docker描述
 docker info
 docker帮助
 docker &ndash;help
-Docker镜像命令 镜像-类
-一个镜像可以形成多个容器实例
+Docker镜像命令 镜像-类 一个镜像可以形成多个容器实例
 鲸鱼背上有集装箱
 蓝色的大海里面 &ndash; 宿主机系统（ubuntu）
 鲸鱼 &ndash; docker
 集装箱 &ndash; 容器实例 from 来自镜像模板
-镜像命令 列出本地主机上的镜像
-docker images
+镜像命令 列出本地主机上的镜像 docker images
 REPOSITORY 表示镜像的仓库源
 TAG 镜像的标签（版本）
 IMAGE ID 镜像ID
@@ -162,57 +158,57 @@ SIZE 镜像大小"/>
 <p>docker帮助</p>
 <p>docker &ndash;help</p>
 <h3 id="docker镜像命令"><strong>Docker镜像命令</strong></h3>
-<p>镜像-类</p>
+<h4 id="镜像-类"><strong>镜像-类</strong></h4>
 <p>一个镜像可以形成多个容器实例</p>
 <p>鲸鱼背上有集装箱</p>
 <p>蓝色的大海里面 &ndash; 宿主机系统（ubuntu）</p>
 <p>鲸鱼 &ndash; docker</p>
 <p>集装箱 &ndash; 容器实例 from 来自镜像模板</p>
 <h3 id="镜像命令"><strong>镜像命令</strong></h3>
-<p>列出本地主机上的镜像</p>
-<p>docker images</p>
-<p>REPOSITORY 表示镜像的仓库源</p>
-<p>TAG 镜像的标签（版本）</p>
-<p>IMAGE ID 镜像ID</p>
-<p>CREATED 镜像创建时间</p>
-<p>SIZE 镜像大小</p>
-<p>options说明：</p>
+<h4 id="列出本地主机上的镜像"><strong>列出本地主机上的镜像</strong></h4>
+<p><code>docker images</code></p>
+<p><code>REPOSITORY</code> 表示镜像的仓库源</p>
+<p><code>TAG</code> 镜像的标签（版本）</p>
+<p><code>IMAGE ID</code>  镜像ID</p>
+<p><code>CREATED</code> 镜像创建时间</p>
+<p><code>SIZE</code> 镜像大小</p>
+<h5 id="options说明"><strong>options说明：</strong></h5>
 <p>-a 列出本地所有的镜像（含中间映像层）</p>
 <p>-q 只显示镜像ID</p>
 <p>&ndash;digets 显示镜像的摘要信息</p>
 <p>&ndash;no-trunc 显示完整的镜像信息</p>
-<p>搜索镜像</p>
-<p>docker search 镜像名</p>
-<p>options说明：</p>
-<p>-s 列出收藏数不小于指定值的镜像</p>
-<p>&ndash;no-trunc 显示完整的镜像描述</p>
-<p>&ndash;automated 只列出automated的镜像</p>
-<p>下载镜像</p>
-<p>docker pull 镜像名[:TAG]</p>
-<p>删除镜像</p>
-<p>docker rmi (remove image)</p>
-<p>options说明：</p>
+<h4 id="搜索镜像"><strong>搜索镜像</strong></h4>
+<p><code>docker search 镜像名</code></p>
+<h5 id="options说明-1"><strong>options说明：</strong></h5>
+<p><code>-s</code> 列出收藏数不小于指定值的镜像</p>
+<p><code>--no-trunc</code> 显示完整的镜像描述</p>
+<p><code>--automated</code> 只列出automated的镜像</p>
+<h4 id="下载镜像"><strong>下载镜像</strong></h4>
+<p><code>docker pull 镜像名[:TAG]</code></p>
+<h4 id="删除镜像"><strong>删除镜像</strong></h4>
+<p><code>docker rmi (remove image)</code></p>
+<h5 id="options说明-2"><strong>options说明：</strong></h5>
 <p>强制删除</p>
-<p>docker rmi -f</p>
+<p><code>docker rmi -f</code></p>
 <p>删除多个</p>
-<p>docker rmi -f 镜像名1:TAG 镜像名2:TAG</p>
-<p>docker rmi af 7a 09</p>
+<p><code>docker rmi -f 镜像名1:TAG 镜像名2:TAG</code></p>
+<p>如：<code>docker rmi af 7a 09</code></p>
 <p>删除全部</p>
-<p>docker rmi -f ${docker images -qa}</p>
+<p><code>docker rmi -f ${docker images -qa}</code></p>
 <p>修改镜像名称</p>
-<p>docker tag imageID newname:tag(版本)</p>
+<p><code>docker tag imageID newname:tag(版本)</code></p>
 <p>然后在删除旧的镜像ID</p>
-<p>docker rmi imageID（旧的）</p>
+<p><code>docker rmi imageID（旧的）</code></p>
 <h3 id="容器命令"><strong>容器命令</strong></h3>
-<p>容器（上）</p>
+<h4 id="容器上"><strong>容器（上）</strong></h4>
 <p>有镜像才能创建容器，这是根本前提（下载centos镜像）</p>
 <p>容器是简易版的linux</p>
 <p>(包含root用户权限、进程空间、用户空间和网络空间等和运行在其中的应用程序)</p>
-<p>新建并启动容器</p>
-<p>docker run [options]IMAGE[COMMAND][ARG&hellip;]</p>
-<p>docker run &ndash;name tomcat -p 80:80 tomcat:8.5.19</p>
-<p>options说明：</p>
-<p>&ndash;name=&quot;容器新名字&rdquo;：为容器制定一个名称</p>
+<h4 id="新建并启动容器"><strong>新建并启动容器</strong></h4>
+<p><code>docker run [options]IMAGE[COMMAND]\[ARG...]</code></p>
+<p><code>docker run --name tomcat -p 80:80 tomcat:8.5.19</code></p>
+<h5 id="options说明-3"><strong>options说明：</strong></h5>
+<p><code>--name=&quot;容器新名字&quot;</code>：为容器制定一个名称</p>
 <p>-d：后台运行容器，并返回容器ID，启动守护进程 #守护态（Daemonized）</p>
 <p>-i: 交互式操作,通常与-t同时使用 #input</p>
 <p>-t: 为容器重新分配一个伪输入终端，通常-i同时使用 #terminal</p>
@@ -220,122 +216,120 @@ SIZE 镜像大小"/>
 <p>-P(大写)：指定端口映射</p>
 <p>(使用docker ps 可以看到随机的端口)</p>
 <p>有四种方式：</p>
-<p>ip:hostPort:containerPort</p>
-<p>ip::containerPort</p>
-<p>hostPort:containerPort  #常用</p>
-<p>containerPort</p>
-<p>/bin/bash：放在镜像名后的是命令，这里我们希望有个交互式 Shell，因此用的是 /bin/bash。</p>
-<p>docker run -d -p 80:80 phpImages</p>
-<p>列出当前所有正在运行的容器</p>
-<p>docker ps</p>
-<p>options说明：</p>
-<p>-a, &ndash;all  #显示所有容器（正在运行+历史运行）</p>
-<p>-f, &ndash;filter  #显示最近创建的容器</p>
-<p>-n, &ndash;last int  #显示最近n个创建的容器</p>
-<p>-q, &ndash;quiet  #静默模式，只显示容器编号</p>
-<p>&ndash;no-trunc  #不截断输出</p>
-<p>退出容器</p>
-<p>exit  #容器停止退出</p>
-<p>ctrl+P+Q  #容器不停止退出</p>
-<p>启动容器</p>
-<p>docker start 容器ID（CONTAINER ID）</p>
-<p>重启容器</p>
-<p>docker restart 容器ID（CONTAINER ID）</p>
-<p>停止容器(停止)</p>
-<p>docker stop 容器ID（CONTAINER ID）</p>
-<p>停止容器（强制停止）</p>
-<p>docker kill 容器ID（CONTAINER ID）</p>
-<p>删除已停止的容器</p>
-<p>docker rm 容器ID（CONTAINER ID）</p>
+<p><code>ip:hostPort:containerPort</code></p>
+<p><code>ip::containerPort</code></p>
+<p><code>hostPort:containerPort &amp;emsp;#常用</code></p>
+<p><code>containerPort</code></p>
+<p><code>/bin/bash：放在镜像名后的是命令，这里我们希望有个交互式 Shell，因此用的是 /bin/bash。</code></p>
+<p><code>docker run -d -p 80:80 phpImages</code></p>
+<h4 id="列出当前所有正在运行的容器"><strong>列出当前所有正在运行的容器</strong></h4>
+<p><code>docker ps</code></p>
+<h5 id="options说明-4"><strong>options说明：</strong></h5>
+<p><code>-a, --all &amp;emsp;#显示所有容器（正在运行+历史运行）</code></p>
+<p><code>-f, --filter &amp;emsp;#显示最近创建的容器</code></p>
+<p><code>-n, --last int &amp;emsp;#显示最近n个创建的容器</code></p>
+<p><code>-q, --quiet &amp;emsp;#静默模式，只显示容器编号</code></p>
+<p><code>--no-trunc &amp;emsp;#不截断输出</code></p>
+<h4 id="退出容器"><strong>退出容器</strong></h4>
+<p><code>exit</code>  #容器停止退出</p>
+<p><code>ctrl+P+Q</code>  #容器不停止退出</p>
+<h4 id="启动容器"><strong>启动容器</strong></h4>
+<p><code>docker start 容器ID（CONTAINER ID）</code></p>
+<h4 id="重启容器"><strong>重启容器</strong></h4>
+<p><code>docker restart 容器ID（CONTAINER ID）</code></p>
+<h4 id="停止容器停止"><strong>停止容器(停止)</strong></h4>
+<p><code>docker stop 容器ID（CONTAINER ID）</code></p>
+<h4 id="停止容器强制停止"><strong>停止容器（强制停止）</strong></h4>
+<p><code>docker kill 容器ID（CONTAINER ID）</code></p>
+<h4 id="删除已停止的容器"><strong>删除已停止的容器</strong></h4>
+<p><code>docker rm 容器ID（CONTAINER ID）</code></p>
 <p>注意：rmi(remove images) rmi是删除镜像</p>
-<p>强制删除容器</p>
-<p>docker rm -f 容器ID（CONTAINER ID）</p>
-<p>一次删除多个容器</p>
-<p>docker rm -f $(docker ps -a)  #先查询在删除</p>
-<p>docker ps -a -q | xargs docker rm</p>
+<h4 id="强制删除容器"><strong>强制删除容器</strong></h4>
+<p><code>docker rm -f 容器ID（CONTAINER ID）</code></p>
+<h4 id="一次删除多个容器"><strong>一次删除多个容器</strong></h4>
+<p><code>docker rm -f $(docker ps -a) &amp;emsp;#先查询在删除</code></p>
+<p><code>docker ps -a -q | xargs docker rm</code></p>
 <p>管道符 上一个命令的结果作为输入参数传递给xargs参数</p>
-<p>修改容器名称</p>
-<p>docker rename oldname newname</p>
-<p>容器（下）</p>
+<h4 id="修改容器名称"><strong>修改容器名称</strong></h4>
+<p><code>docker rename oldname newname</code></p>
+<h4 id="容器下"><strong>容器（下）</strong></h4>
 <p><em>重要</em></p>
-<p>启动守护式容器</p>
-<p>docker run -d 容器名称</p>
+<h4 id="启动守护式容器"><strong>启动守护式容器</strong></h4>
+<p><code>docker run -d 容器名称</code></p>
 <p>有些需要在后台启动，有些需要在前台启动</p>
-<p>原因：</p>
+<p><strong>原因：</strong></p>
 <p>docker容器后台运行，就必须又一个前台进程</p>
 <p>（与前台交互）</p>
-<p>最佳解决方案是：</p>
+<p><strong>最佳解决方案是：</strong></p>
 <p>将你要运行的程序以前台进程的形式运行</p>
-<p>查看容器日志</p>
-<p>docker logs -f -t &ndash;tail</p>
-<p>-f follow 跟随最近的日志打印</p>
+<h4 id="查看容器日志"><strong>查看容器日志</strong></h4>
+<p><code>docker logs -f -t --tail</code></p>
+<p><code>-f follow</code> 跟随最近的日志打印</p>
 <p>-t time</p>
-<p>&ndash;tail 数字，显示最后多少条</p>
-<p>```</p>
-<p>linux shell编程</p>
-<p>docker run -d centos /bin/sh -c &ldquo;while true;do echo hello zzyy;sleep 2;done&rdquo;</p>
-<p>以后台的形式运行centos：</p>
-<p>docker run -d centos</p>
+<p><code>--tail</code> 数字，显示最后多少条</p>
+<h4 id="linux-shell编程"><strong>linux shell编程</strong></h4>
+<p><code>docker run -d centos /bin/sh -c &quot;while true;do echo hello zzyy;sleep 2;done&quot;</code></p>
+<h4 id="以后台的形式运行centos"><strong>以后台的形式运行centos：</strong></h4>
+<p><code>docker run -d centos</code></p>
 <p>运行后以脚本的形式循环：</p>
-<p>/bin/sh -c &ldquo;while true;</p>
+<p><code>/bin/sh -c &quot;while true;</code></p>
 <p>每两秒的形式打印输出hello zzyy</p>
-<p>do echo hello zzyy;sleep 2;done“</p>
-<p>```</p>
-<p>查看容器内存运行的进程</p>
-<p>docker top 容器ID</p>
-<p>查看容器内部细节</p>
-<p>docker inspect 容器ID</p>
-<p>进入正在运行的容器并以命令行交互</p>
-<p>docker exec -it 容器ID bashshell</p>
-<p>docker attach 容器ID （重新进入）</p>
-<p>attach和exec的区别：</p>
-<p>attach （不打开新的进程）</p>
+<p><code>do echo hello zzyy;sleep 2;done“</code></p>
+<h4 id="查看容器内存运行的进程"><strong>查看容器内存运行的进程</strong></h4>
+<p><code>docker top 容器ID</code></p>
+<h4 id="查看容器内部细节"><strong>查看容器内部细节</strong></h4>
+<p><code>docker inspect 容器ID</code></p>
+<h4 id="进入正在运行的容器并以命令行交互"><strong>进入正在运行的容器并以命令行交互</strong></h4>
+<p><code>docker exec -it 容器ID bashshell</code></p>
+<p><code>docker attach 容器ID （重新进入）</code></p>
+<p><strong>attach和exec的区别：</strong></p>
+<p><strong>attach （不打开新的进程）</strong></p>
 <p>直接进入容器启动命令的终端，不会启动新的进程</p>
-<p>exec （打开新的进程）</p>
+<p><strong>exec （打开新的进程）</strong></p>
 <p>在容器中打开行的终端，并且可以启动新的进程</p>
-<p>从容器内拷贝文件到主机上</p>
-<p>docker cp 容器ID：容器内路径 目的主机路径</p>
-<p>如：docker cp 63:/run.sh /home/z</p>
+<h4 id="从容器内拷贝文件到主机上"><strong>从容器内拷贝文件到主机上</strong></h4>
+<p><code>docker cp 容器ID：容器内路径 目的主机路径</code></p>
+<p>如：<code>docker cp 63:/run.sh /home/z</code></p>
 <h3 id="docker镜像原理"><strong>docker镜像原理</strong></h3>
-<p>docker镜像</p>
-<p>是什么：</p>
+<h4 id="docker镜像"><strong>docker镜像</strong></h4>
+<h5 id="是什么"><strong>是什么：</strong></h5>
 <p>UnionFS（联合文件系统）</p>
 <p>Docker镜像加载原理</p>
 <p>分层的镜像（为什么要采用分层的结构呢）</p>
-<p>特点：</p>
+<h4 id="特点"><strong>特点</strong>：</h4>
 <p>Union文件系统（UnionFS）是一种分层、轻量级并且高性能的文件系统，<strong>它支持对文件系统的修改作为一次提交来一层层的叠加</strong> ，同时可以将不同目录挂载到同一个虚拟文件系统下(unite several directories into a single virtual filesystem)。Union 文件系统是 Docker 镜像的基础。镜像可以通过分层来进行继承，基于基础镜像（没有父镜像），可以制作各种具体的应用镜像。</p>
 <p>特性：<strong>一次同时加载多个文件系统，但从外面看起来，只能看到一个文件系统，联合加载会把各层文件系统叠加起来，这样最终的文件系统会包含所有底层的文件和目录。</strong></p>
-<p>分层的镜像</p>
+<h5 id="分层的镜像"><strong>分层的镜像</strong></h5>
 <p>以pull为例，下载的过程中可看到docker的镜像一层一层的在下载。</p>
 <p>最大的好处就是 &ndash; 共享资源</p>
 <p>比如：有多个镜像都从相同的 base 镜像构建而来，那么 Docker Host 只需在磁盘上保存一份 base 镜像；同时内存中也只需加载一份 base 镜像，就可以为所有容器服务了。而且镜像的每一层都可以被共享，我们将在后面更深入地讨论这个特性。</p>
-<p>Docker镜像commit操作补充</p>
-<p>docker commit 提交容器副本使之成为一个新的镜像</p>
-<p>docker commit -m = &ldquo;提交的描述信息&rdquo; -a=&quot;作者&rdquo; 容器ID 要创建的目标镜像名:[标签名]</p>
-<p>docker commit -a='rabbit&rsquo; -m=&quot;tomcatTest&rdquo; without docs 638412a7bd0d rab3it/tomcatT:1.0</p>
+<h4 id="docker镜像commit操作补充"><strong>Docker镜像commit操作补充</strong></h4>
+<p><code>docker commit 提交容器副本使之成为一个新的镜像</code></p>
+<p><code>docker commit -m = &quot;提交的描述信息&quot; -a=&quot;作者&quot; 容器ID 要创建的目标镜像名:[标签名]</code></p>
+<p><code>docker commit -a='rabbit' -m=&quot;tomcatTest&quot; without docs 638412a7bd0d rab3it/tomcatT:1.0</code></p>
 <h3 id="docker容器数据卷"><strong>docker容器数据卷</strong></h3>
-<p>是什么</p>
+<h4 id="是什么-1"><strong>是什么</strong></h4>
 <p>查到老师电脑拷贝的硬盘</p>
-<p>能干嘛：</p>
+<h4 id="能干嘛"><strong>能干嘛</strong>：</h4>
 <p>容器的持久化</p>
 <p>容器间继承+共享数据</p>
 <p>数据卷</p>
 <p>容器内添加</p>
 <p>1⃣️直接命令添加</p>
 <p>2⃣️dockerFile添加</p>
-<p>直接命令添加</p>
-<p>命令</p>
-<p>docker run -it -v/宿主机绝对路径目录:/容器内目录 镜像名</p>
+<h4 id="直接命令添加"><strong>直接命令添加</strong></h4>
+<p><strong>命令</strong></p>
+<p><code>docker run -it -v/宿主机绝对路径目录:/容器内目录 镜像名</code></p>
 <p>比如：</p>
-<p>docker run -it -v/myDataVolume:/dataVolumeContainer 镜像名</p>
-<p>查看数据卷是否挂载成功</p>
-<p>docker inspect 容器ID</p>
+<p><code>docker run -it -v/myDataVolume:/dataVolumeContainer 镜像名</code></p>
+<h4 id="查看数据卷是否挂载成功"><strong>查看数据卷是否挂载成功</strong></h4>
+<p><code>docker inspect 容器ID</code></p>
 <p>容器和宿主机之间数据共享</p>
 <p>容器停止退出后，主机修改后数据是否同步</p>
 <p>完全同步</p>
 <p>命令带权限</p>
 <p>如果Rw是false</p>
-<p>docker run -it -v/宿主机绝对路径目录:/容器内目录:ro 镜像名</p>
+<p><code>docker run -it -v/宿主机绝对路径目录:/容器内目录:ro 镜像名</code></p>
 <p>ro read-only 只读</p>
 <p>TAG tar文件</p>
 <p>IMAGE ID 镜像ID</p>
@@ -347,57 +341,59 @@ SIZE 镜像大小"/>
 <p>REPOSITORY 仓库</p>
 <p>保存了很多镜像，比如共有的 第三方的 ubuntu、mysql、nginx、tomcat 等等，也可以通过push 上传镜像</p>
 <h3 id="下载"><strong>下载</strong></h3>
-<p>Docker pull nginx(不指定版本，默认下载最新的)</p>
-<p>等于 docker pull nginx:latest</p>
+<p><code>Docker pull nginx(不指定版本，默认下载最新的)</code></p>
+<p>等于<code> docker pull nginx:latest</code></p>
 <h3 id="运行"><strong>运行</strong></h3>
-<p>docker run -d -p 80:80 nginx</p>
+<p><code>docker run -d -p 80:80 nginx</code></p>
 <p>-p 端口映射（外部:服务端口）</p>
 <p>-d 后台运行(Daemonized 守护进程)</p>
 <h3 id="进入容器"><strong>进入容器</strong></h3>
-<p>查看运行的容器</p>
-<p>docker ps</p>
-<p>进入容器</p>
-<p>docker exec -it 45 bash</p>
-<p>删除容器</p>
-<p>docker rm -f 45</p>
-<p>修改</p>
-<p>docker commit 45 m1</p>
+<h4 id="查看运行的容器"><strong>查看运行的容器</strong></h4>
+<p><code>docker ps</code></p>
+<h4 id="进入容器-1"><strong>进入容器</strong></h4>
+<p><code>docker exec -it 45 bash</code></p>
+<h4 id="删除容器"><strong>删除容器</strong></h4>
+<p><code>docker rm -f 45</code></p>
+<h4 id="修改"><strong>修改</strong></h4>
+<p><code>docker commit 45 m1</code></p>
 <p>dockerfile</p>
 <p>from 指定</p>
 <h3 id="docker命令"><strong>docker命令</strong></h3>
-<p>安装docker</p>
-<p>yum install docker</p>
-<p>启动docker</p>
-<p>systemctl start docker</p>
-<p>关闭docker</p>
-<p>systemctl stop docker</p>
-<p>下载相应镜像</p>
-<p>docker pull centos/ubuntu/tomcat  </p>
-<p>docker run –d -p 8080:8080 tomcat</p>
-<p>docker run &ndash;name tomcat -p 8080:8080 -d tomcat 运行相应镜像</p>
-<p>&ndash;name 是创建好的容器命名</p>
-<p>-p 端口映射 自定义:原来的端口</p>
+<h4 id="安装docker"><strong>安装docker</strong></h4>
+<p><code>yum install docker</code></p>
+<h4 id="启动docker"><strong>启动docker</strong></h4>
+<p><code>systemctl start docker</code></p>
+<h4 id="关闭docker"><strong>关闭docker</strong></h4>
+<p><code>systemctl stop docker</code></p>
+<h4 id="下载相应镜像"><strong>下载相应镜像</strong></h4>
+<p><code>docker pull centos/ubuntu/tomcat</code>  </p>
+<p><code>docker run –d -p 8080:8080 tomcat</code></p>
+<p><code>docker run --name tomcat -p 8080:8080 -d tomcat 运行相应镜像</code></p>
+<p><code>--name</code> 是创建好的容器命名</p>
+<p><code>-p</code> 端口映射 自定义:原来的端口</p>
 <p>-d 后台运行(Daemonized 守护进程)</p>
-<p>-e 设置参数查看docker容器id (CONTAINER ID)方法</p>
-<p>docker run -i -t ubuntu：15.10 /bin/bash</p>
+<p><code>-e</code> 设置参数查看docker容器id (CONTAINER ID)方法</p>
+<p><code>docker run -i -t ubuntu：15.10 /bin/bash</code></p>
 <p>先进入（运行）容器，就会有docker 容器id</p>
 <p>-d :分离模式: 在后台运行</p>
 <p>-i :即使没有附加也保持STDIN 打开</p>
 <p>-t :分配一个伪终端</p>
 <p>stdin解释：</p>
 <p>在Linux系统中，一切设备都看作文件。而每打开一个文件，就有一个代表该打开文件的文件描述符。</p>
-<p>程序启动时默认打开三个I/O设备文件：标准输入文件stdin，标准输出文件stdout，标准错误输出文件stderr，分别得到文件描述符 0, 1, 2。查看运行的容器</p>
-<p>docker ps -a/docker psdocker start CID（容器ID）</p>
-<p>docker rm CID（容器ID）</p>
-<p>进入容器内部</p>
-<p>docker exec -it 容器ID /bin/bashBash 也是大多数Linux 系统默认的 Shell。</p>
+<p>程序启动时默认打开三个I/O设备文件：标准输入文件stdin，标准输出文件stdout，标准错误输出文件stderr，分别得到文件描述符 0, 1, 2。</p>
+<h4 id="查看运行的容器-1"><strong>查看运行的容器</strong></h4>
+<p><code>docker ps -a/docker psdocker start CID（容器ID）</code></p>
+<h4 id="删除容器-1"><strong>删除容器</strong></h4>
+<p><code>docker rm CID（容器ID）</code></p>
+<h4 id="进入容器内部"><strong>进入容器内部</strong></h4>
+<p><code>docker exec -it 容器ID /bin/bashBash 也是大多数Linux 系统默认的 Shell。</code></p>
 <p>（linux中的shell类似于win中的.bat）! 告诉系统其后路径所指定的程序即是解释此脚本文件的 Shell 程序。</p>
-<p>docker stop containerId  #containerId 是容器的ID</p>
-<p>docker rm containerId  #containerId 是容器的ID</p>
-<p>docker stop</p>
-<p>(docker ps -a -q)  #remove删除所有容器</p>
-<p>docker  #更改镜像id</p>
-<p>docker vulhubdocker-compose build up -d</p>
+<p><code>docker stop containerId &amp;emsp;#containerId 是容器的ID</code></p>
+<p><code>docker rm containerId &amp;emsp;#containerId 是容器的ID</code></p>
+<p><code>docker stop</code></p>
+<p><code>(docker ps -a -q) &amp;emsp;#remove删除所有容器</code></p>
+<p><code>docker &amp;emsp;#更改镜像id</code></p>
+<p><code>docker vulhubdocker-compose build up -d</code></p>
 <p> </p>
 <h4 id="参考"><strong>参考</strong>：</h4>
 <p><a href="http:%E2%80%83#www.dockerinfo.net/document">docker中文文档</a></p>
