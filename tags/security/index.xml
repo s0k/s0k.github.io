@@ -6,10 +6,27 @@
     <description>Recent content in security on rab3it</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 01 Dec 2020 15:53:10 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 19 Feb 2021 17:33:33 +0800</lastBuildDate>
     
 	<atom:link href="https://rab3it.github.io/tags/security/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Bug Bounty Tips</title>
+      <link>https://rab3it.github.io/post/bug-bounty-tips/</link>
+      <pubDate>Fri, 19 Feb 2021 17:33:33 +0800</pubDate>
+      
+      <guid>https://rab3it.github.io/post/bug-bounty-tips/</guid>
+      <description>bug-bounty-tips BBT1-10 – Filter out noise in Burp Suite 在使用Burp Suite进行测试时，
+可能需要将这些模式添加到Burp Suite&amp;gt;代理&amp;gt;选项&amp;gt; TLS Pass Through设置中：
+.*\.google\.com .*\.gstatic\.com .*\.googleapis\.com .*\.pki\.goog .*\.mozilla\..* 现在，与这些主机的所有基础连接都将直接转到它们，而无需通过代理。
+我们的代理日志中不再有干扰！
+BBT7-3 – Tests for identifying SQL injections 100% 如果存在以下情况，这是100％的时间找到SQL注入的方法：
+/?q=1 /?q=1&amp;#39; /?q=1&amp;#34; /?q=[1] /?q[]=1 /?q=1` /?q=1\ /?q=1/*&amp;#39;*/ /?q=1/*!1111&amp;#39;*/ /?q=1&amp;#39;||&amp;#39;asd&amp;#39;||&amp;#39; &amp;lt;== concat string /?q=1&amp;#39; or &amp;#39;1&amp;#39;=&amp;#39;1 /?q=1 or 1=1 /?q=&amp;#39;or&amp;#39;&amp;#39;=&amp;#39; 针对以下情况使用这些模式：http://target.com/?q=HERE
+BBT7-13 – List of 14 Google dorks for recon and easy wins 以下是14个有趣的Google黑客搜索技巧，
+它们可以帮助我们对目标域进行侦查，也可以找到一些简单的方法：
+# Login panel search site:target.</description>
+    </item>
     
     <item>
       <title>Ms17-010</title>
